@@ -1,9 +1,10 @@
 import "./App.css";
 import { ModulesExample } from "./examples/modules";
+import { StyledComponent } from "./examples/styled-components";
 function App() {
   return (
     <>
-      <ModulesExample></ModulesExample>
+      <StyledComponent color="pink" />
     </>
   );
 }
