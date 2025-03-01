@@ -1,0 +1,12 @@
+section {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.important_P {
+    color: #333;
+    font-size: 50px;
+    font-family: Arial, sans-serif;
+  }
+
