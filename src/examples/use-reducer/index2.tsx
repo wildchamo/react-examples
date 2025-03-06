@@ -10,7 +10,7 @@ type actionType = {
 
 type reducerType = (state: stateType, action: actionType) => stateType;
 
-const reducer: reducerType = (state, action) => {
+const reducer: reducerType = (state, action): stateType => {
   switch (action.type) {
     case "increment":
       return { count: state.count + 1 };

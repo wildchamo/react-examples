@@ -2,10 +2,18 @@ import { useContext } from "react";
 import { useState } from "react";
 import { createContext } from "react";
 
-const ThemeContext = createContext();
+type ThemeContextType = {
+  theme: "light" | "dark";
+  toggleTheme: () => void;
+};
 
-function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState("dark");
+const ThemeContext = createContext<ThemeContextType>({
+  theme: "dark",
+  toggleTheme: () => {},
+});
+
+function ThemeProvider({ children }: { children: React.ReactNode }) {
+  const [theme, setTheme] = useState<"light" | "dark">("dark");
 
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
