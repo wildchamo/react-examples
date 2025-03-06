@@ -36,9 +36,8 @@ export const DynamicDataInput = () => {
       <h1>Lista de Posts</h1>
 
       <input
-        className="border border-gray-300 p-2 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className=""
         type="text"
-        value={userInput}
         onChange={(e) => setUserInput(e.target.value)}
       />
 
@@ -54,7 +53,6 @@ export const DynamicDataInput = () => {
         </ul>
       )}
 
-      {posts.length === 0 && <p>Posts encontrados: {posts.length}</p>}
       {error && <p>Error: {error.message}</p>}
     </>
   );
